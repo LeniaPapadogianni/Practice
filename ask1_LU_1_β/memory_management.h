@@ -1,0 +1,15 @@
+#ifndef MEMORY_MANAGEMENT_H
+#define MEMORY_MANAGEMENT_H
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+double **AllocateMatrix(int n);
+void FreeMatrix(double **matrix, int n);
+int **AllocatePivot(int n);
+void FreePivot(int **pivot, int n);
+void AllocateMemory(int n, double **x, double **y, double ***L, double ***U, int ***pivot, double ***A_inv);
+void FreeMemory(int n, double **A, double *b, double *x, double *y, double **L, double **U, int **pivot, double **A_inv);
+
+#endif
